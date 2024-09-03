@@ -1,3 +1,4 @@
+#pragma once
 #include <TelCoColorCoder.h>
 
 std::string TelCoColorCoder::ColorPair::ToString()

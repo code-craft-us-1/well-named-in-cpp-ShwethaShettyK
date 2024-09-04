@@ -1,7 +1,7 @@
 
 #include "telcocolorcoder.h"
 
-std::string TelCoColorCoder::ColorPair::ToString()
+std::string TelCoColorCoder::ColorPair::ColorPair::ToString()
 {
    std::string colorPairStr = MajorColorNames[majorColor];
     colorPairStr += " ";
@@ -9,7 +9,7 @@ std::string TelCoColorCoder::ColorPair::ToString()
     return colorPairStr;
 }
 
-ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber)const
+ColorPair TelCoColorCoder::ColorPair::GetColorFromPairNumber(int pairNumber)const
 {
 int zeroBasedPairNumber = pairNumber - 1;
 MajorColor majorColor = 
@@ -19,7 +19,7 @@ MinorColor minorColor =
 return ColorPair(majorColor, minorColor);
 }
 
-int TelCoColorCoder::GetPairNumberFromColor(MajorColor major, MinorColor minor)const {
+int TelCoColorCoder::ColorPair::GetPairNumberFromColor(MajorColor major, MinorColor minor)const {
     return major * numberOfMinorColors + minor + 1;
 }
             

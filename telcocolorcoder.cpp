@@ -9,7 +9,7 @@ std::string TelCoColorCoder::ColorPair::ColorPair::ToString()
     return colorPairStr;
 }
 
-ColorPair TelCoColorCoder::ColorPair::GetColorFromPairNumber(int pairNumber)const
+ColorPair TelCoColorCoder::ColorPair::GetColorFromPairNumber(int pairNumber)
 {
 int zeroBasedPairNumber = pairNumber - 1;
 MajorColor majorColor = 
@@ -19,7 +19,7 @@ MinorColor minorColor =
 return ColorPair(majorColor, minorColor);
 }
 
-int TelCoColorCoder::ColorPair::GetPairNumberFromColor(MajorColor major, MinorColor minor)const {
+int TelCoColorCoder::ColorPair::GetPairNumberFromColor(MajorColor major, MinorColor minor) {
     return major * numberOfMinorColors + minor + 1;
 }
             

@@ -1,5 +1,5 @@
 #pragma once
-#include <TelCoColorCoder.h>
+#include <telcocolorcoder.h>
 
 std::string TelCoColorCoder::ColorPair::ToString()
 {

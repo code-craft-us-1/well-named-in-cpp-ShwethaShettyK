@@ -1,5 +1,5 @@
 
-#include <telcocolorcoder.h>
+#include "telcocolorcoder.h"
 
 std::string TelCoColorCoder::ColorPair::ToString()
 {

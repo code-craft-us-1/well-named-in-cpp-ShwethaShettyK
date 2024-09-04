@@ -1,4 +1,4 @@
-#include "TelCoColorCoder.h"
+#include "telcocolorcoder.h"
 
 using namespace TelCoColorCoder;
 void testNumberToPair(int pairNumber,

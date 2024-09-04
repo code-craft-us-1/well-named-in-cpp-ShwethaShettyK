@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <assert.h>
-#include <common.h>
+#include "common.h"
 
 namespace TelCoColorCoder
 {

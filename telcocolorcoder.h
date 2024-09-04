@@ -18,7 +18,7 @@ namespace TelCoColorCoder
             inline MinorColor getMinor() { return minorColor;
             }
             std::string ToString(); 
-            ColorPair GetColorFromPairNumber(int pairNumber)const;         
-            int GetPairNumberFromColor(MajorColor major, MinorColor minor)const; 
+            static ColorPair GetColorFromPairNumber(int pairNumber);         
+            static int GetPairNumberFromColor(MajorColor major, MinorColor minor); 
     };
 }

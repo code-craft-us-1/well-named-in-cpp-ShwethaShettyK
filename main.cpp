@@ -25,7 +25,7 @@ void testPairToNumber(
 void PrintReferenceManual()
 {
 
-    for (int PairNumber = 0; PairNumber <= 25; PairNumber++)
+    for (int PairNumber = 1; PairNumber <= 25; PairNumber++)
     {
         ColorPair colorPair =ColorPair::GetColorFromPairNumber(PairNumber);
         std::cout << "Pair Number: " << PairNumber << "  Colors: " << colorPair.ToString() << "\n";

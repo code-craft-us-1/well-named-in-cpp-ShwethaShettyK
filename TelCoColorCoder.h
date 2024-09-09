@@ -12,7 +12,8 @@ namespace TelCoColorCoder
     extern int numberOfMajorColors;
     extern const char* MinorColorNames[];
     extern int numberOfMinorColors;
-    
+    void PrintReferenceManual();
+
     class ColorPair {
     private:
         MajorColor majorColor;

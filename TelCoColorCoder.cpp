@@ -16,6 +16,16 @@ int TelCoColorCoder::numberOfMinorColors =
 sizeof(TelCoColorCoder::MinorColorNames) / sizeof(TelCoColorCoder::MinorColorNames[0]);
 
 
+void TelCoColorCoder::PrintReferenceManual()
+{
+
+    for (int PairNumber = 1; PairNumber <= 25; PairNumber++)
+    {
+        ColorPair colorPair = ColorPair::GetColorFromPairNumber(PairNumber);
+        std::cout << "Pair Number: " << PairNumber << "  Colors: " << colorPair.ToString() << "\n";
+    }
+}
+
 std::string TelCoColorCoder::ColorPair::ToString()
 {
     std::string colorPairStr = MajorColorNames[majorColor];

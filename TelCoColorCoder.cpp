@@ -3,22 +3,22 @@
 
 namespace TelCoColorCoder
 {
-    const char* TelCoColorCoder::MajorColorNames[] = {
+    const char* MajorColorNames[] = {
             "White", "Red", "Black", "Yellow", "Violet"
     };
 
     int numberOfMajorColors =
-        sizeof(TelCoColorCoder::MajorColorNames) / sizeof(TelCoColorCoder::MajorColorNames[0]);
+        sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 
-    const char* TelCoColorCoder::MinorColorNames[] = {
+    const char* MinorColorNames[] = {
         "Blue", "Orange", "Green", "Brown", "Slate"
     };
 
-    int TelCoColorCoder::numberOfMinorColors =
-        sizeof(TelCoColorCoder::MinorColorNames) / sizeof(TelCoColorCoder::MinorColorNames[0]);
+    int numberOfMinorColors =
+        sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
 
-    void TelCoColorCoder::PrintReferenceManual()
+    void PrintReferenceManual()
     {
         int totalpairs = numberOfMajorColors * numberOfMinorColors;
         for (int PairNumber = 1; PairNumber <= totalpairs; PairNumber++)
@@ -28,7 +28,7 @@ namespace TelCoColorCoder
         }
     }
 
-    std::string TelCoColorCoder::ColorPair::ToString()
+    std::string ColorPair::ToString()
     {
         std::string colorPairStr = MajorColorNames[majorColor];
         colorPairStr += " ";
@@ -37,7 +37,7 @@ namespace TelCoColorCoder
     }
 
 
-    TelCoColorCoder::ColorPair TelCoColorCoder::ColorPair::GetColorFromPairNumber(int pairNumber) {
+    ColorPair ColorPair::GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
         MajorColor majorColor =
             (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
@@ -45,7 +45,7 @@ namespace TelCoColorCoder
             (MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
         return ColorPair(majorColor, minorColor);
     }
-    int TelCoColorCoder::ColorPair::GetPairNumberFromColor(MajorColor major, MinorColor minor) {
+    int ColorPair::GetPairNumberFromColor(MajorColor major, MinorColor minor) {
         return major * numberOfMinorColors + minor + 1;
     }
 }
